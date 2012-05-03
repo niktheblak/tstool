@@ -1,0 +1,17 @@
+name: TSTool
+version: 0.1
+description: MPEG-2 Transport Stream analysis and optimization tool
+license: BSD
+author: Niko Korhonen
+copyright: Niko Korhonen 2008-2012
+maintainer: niko.korhonen@gmail.com
+stability: alpha
+synopsis: MPEG-2 Transport Stream analysis and optimization tool
+build-depends: base, bytestring, binary
+ghc-options: -O2 -funbox-strict-fields
+executable: tstool
+main-is: TSToolCLI.hs
+exposed-modules:
+	MPEG.Tools.StreamIO, MPEG.Tools.TransportBuffer, MPEG.Tools.Analyzer, MPEG.Tools.Optimizer,
+	MPEG.TS.AdaptationField, MPEG.TS.TransportPacket,
+	Statistics, StringUtils, TSToolCLI
