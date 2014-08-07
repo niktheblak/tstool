@@ -37,7 +37,7 @@ makeBar n max =
 
 -- | Generates a string representation of a distribution table generated
 -- by the 'calculateDistribution' function.
-showTable :: (Ord k, Show k, Integral a) => M.Map k a -> String
+showTable :: (Ord k, Show k, Show a, Integral a) => M.Map k a -> String
 showTable m =
     let keys = M.keys m
         s = sort keys

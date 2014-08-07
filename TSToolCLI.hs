@@ -2,12 +2,13 @@ module Main where
 
 import Data.Binary(encode)
 import qualified Data.ByteString.Lazy as LB
-import System
-import System.IO
 import MPEG.Tools.Analyzer
 import MPEG.Tools.PacketGenerator
 import MPEG.Tools.StreamIO
 import MPEG.Tools.TransportBuffer
+import System.Environment(getArgs)
+import System.IO
+import System.IO.Error
 
 data Command = Analyze | GenerateData | PacketOrder | PrintPackets deriving (Eq, Show)
 

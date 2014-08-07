@@ -5,6 +5,7 @@ module MPEG.Tools.StreamIO(TransportBuffer,
 import MPEG.TS.TransportPacket
 import MPEG.TS.FastTransportPacket
 import MPEG.Tools.TransportBuffer
+import Control.Exception(catch)
 import System.IO
 import System.IO.Error
 import qualified Data.Map as M
@@ -14,7 +15,7 @@ readPackets handle = catch
     (do packet <- readTransportPacket handle
         rest <- readPackets handle
         return (packet : rest))
-    (\e -> (do putStrLn ("Error: " ++ show e ++ ". Skipping packet...")
+    (\e -> (do putStrLn ("Error: " ++ show (e :: IOError) ++ ". Skipping packet...")
                seekToNextSyncByte handle
                rest <- readPackets handle
                return rest))

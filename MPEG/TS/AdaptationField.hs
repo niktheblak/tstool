@@ -7,7 +7,6 @@ import Data.Binary
 import Data.Binary.Get
 import Data.Binary.Put
 import Data.Word
-import Debug.Trace
 import System.IO
 import qualified Data.ByteString.Lazy as LB
 

@@ -7,6 +7,7 @@ import MPEG.TS.TransportPacket
 import MPEG.TS.FastTransportPacket
 import MPEG.Tools.TransportBuffer
 import MPEG.Tools.StreamIO
+import Control.Exception(catch)
 import Data.Binary
 import Data.List(sort)
 import qualified Data.Map as M
