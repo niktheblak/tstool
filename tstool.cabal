@@ -11,6 +11,7 @@ synopsis: MPEG-2 Transport Stream analysis and optimization tool
 Build-Type: Simple
 
 Library
+  hs-source-dirs: src
   Build-Depends:  base, containers, bytestring, binary
   ghc-options:    -O2 -funbox-strict-fields
   exposed-modules:
@@ -19,6 +20,7 @@ Library
     Statistics, StringUtils
 
 Executable tstool
+  hs-source-dirs: src
   Build-Depends:  base, containers, bytestring, binary
   Main-Is:        TSToolCLI.hs
   ghc-options:    -O2 -funbox-strict-fields
